@@ -1,0 +1,103 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+ <!-- Header Banner -->
+ <section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Careers</h6>
+                <h1>Apply <span>Now</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Careers -->
+        <div class="positions section-padding bg-gray">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-12 mb-60">
+                    
+                       
+         
+                     
+                     <div class="news-comment-section" id="orderrrr">
+                  
+                 
+                         <!-- Contact Form -->
+                         <h3>Please fill out the form below.</h3>
+                         <form method="post" class="row form application" enctype="multipart/form-data">
+                             {% csrf_token %}
+         
+                           <div class="col-md-6">
+                             {{form.name}}
+                           </div>
+                           
+                           <div class="col-md-6">
+                            {{form.email}}
+                              
+                            </div>
+                          
+                           <div class="col-md-6" >
+                            <div class="phone-input-container">
+                              {{form.phone}}
+                            </div>
+                          
+                             
+                           </div>
+                           
+         
+                          
+         
+                           <div class="col-md-6">
+         
+                             {{form.job}}
+                           </div>
+         
+                           <div class="col-md-12">
+                           
+                            {{form.note}} 
+                           
+                          </div>
+         
+                           <div class="col-md-12">
+                            Upload Your Resume/CV ( Upload Files upto 5mb )
+                             {{form.resume}} 
+                            
+                           </div>
+                          
+                           <div class="col-md-12">
+                             <button class="button-secondary mt-15">
+                               <a href="#0"><span>Apply Job</span></a>
+                             </button>
+                           </div>
+                         </form>
+                       </div>
+         
+         
+         
+         
+                 
+                    
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,154 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+<!-- Header Banner -->
+<section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Get in touch</h6>
+                <h1>Contact <span>Us</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact -->
+<section class="contact section-padding">
+    <div class="container">
+        <div class="row mb-90">
+            <div class="col-md-5 mb-60">
+                <h5>Contact Information</h5>
+                <p class="mb-30">For any inquiries, collaborations, or to learn more about our innovative electrical solutions and safety services, please feel free to get in touch with us. Our dedicated team at Anwar Al Meiha Modern LLC and Safeline is here to assist you.</p>
+                <div class="contact-link">
+                    <div class="contact-link-icon"><span class="norc-phone"></span></div>
+                    <div class="contact-link-content">
+                        <div class="contact-link-title">Call us</div>
+                        <div class="contact-link-text">+968 9192 4377</div>
+                        <div class="contact-link-text">+968 2698 8333</div>
+                    </div>
+                </div>
+                
+                <div class="contact-link">
+                    <div class="contact-link-icon"><span class="norc-mail"></span></div>
+                    <div class="contact-link-content">
+                        <div class="contact-link-title">Send us an email</div>
+                        <div class="contact-link-text">enquiry@safe-line.co</div>
+                    </div>
+                </div>
+                <div class="contact-link">
+                    <div class="contact-link-icon"><span class="norc-square-pin"></span></div>
+                    <div class="contact-link-content">
+                        <div class="contact-link-title">Visit our office</div>
+                        <div class="contact-link-text">Barka Industrial Area, Sultanate of Oman<br> PC:320 , PB:736</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-2">
+                <div class="form-wrap">
+                    <div class="form-box">
+                        <h5>Get in touch</h5>
+                        <form method="post" class="contact__form form contact" enctype="multipart/form-data">
+                            <!-- Form message -->
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-success contact__msg" style="display: none" role="alert"> Your message was sent successfully. </div>
+                                </div>
+                            </div>
+                            <!-- Form elements -->
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    {{form.name}}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    {{form.email}}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="phone-input-container">
+                                        {{form.phone}}
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    {{form.subject}}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    {{form.message}}
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="button-secondary mt-15"><a href="#0"><span>Send Message</span></a></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Map Section -->
+        <div class="row">
+            <div class="col-md-12  animate-box" data-animate-effect="fadeInUp">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1199.5166037537078!2d57.86372819732128!3d23.614195339020466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8dda577d074c2d%3A0x94dc1c7fd8fe4185!2sSafeline%20Electricals!5e0!3m2!1sen!2sin!4v1690968739532!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Faqs -->
+<section class="section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="mb-0">Frequently Asked Questions</p>
+                <div class="section-title">Answer <span>Questions</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Accordion -->
+            <div class="col-md-8 offset-md-2 faqs-accordion mb-30">
+                <div class="accordion">
+                    <div class="item">
+                        <div class="title">
+                            <h6>How does Safeline, as a branch company of Anwar Al Meiha Group, contribute to safety and security?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Safeline specializes in providing comprehensive safety and security solutions. They offer advanced surveillance systems, access control solutions, fire detection and prevention systems, and more. With Safeline, clients can benefit from integrated safety solutions and industry-leading technology to ensure the protection of their premises.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>Can Safeline handle large-scale projects</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Absolutely. As a market leader, we have the expertise and resources to handle projects of all sizes, from small-scale installations to large-scale industrial projects. Our experienced team is equipped to manage and execute projects efficiently and effectively.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>Is Safeline licensed and insured</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Yes, we are a licensed and insured electrical contractor. We adhere to all relevant industry regulations and safety standards to ensure the highest quality of work and the protection of our clients.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>How can I request a quote for electrical services?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>To request a quote, you can contact us through phone or email, providing details about your project or specific electrical needs. Our team will review the information and provide you with a comprehensive and competitive quote tailored to your requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+
+<!-- Header Banner -->
+<section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Delivering Exceptional Solutions</h6>
+                <h1>Our <span>Services</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services -->
+<section class="services center section-padding bg-gray" style="padding: 70px 0!important;">
+    <div class="container">
+        <div class="row">
+
+            {% for service in services %}
+        
+            <div class="col-md-4">
+                <div class="item mb-30">
+                    <div class="service-img">
+                        <div class="img"> <img src="{{service.image.url}}" alt=""> </div>
+                    </div>
+                    <div class="cont">
+                        
+                        <h5><a href="{% url 'web:services-details' service.slug %}">{{service.name}}</a></h5>
+                        
+                        {% if service.sub_heading %}
+                            <p>{{ service.sub_heading }}</p>
+                        {% else %}
+                            <p></p>
+                        {% endif %}
+                        
+                        {% if service.description %}
+                        <a href="{% url 'web:services-details' service.slug %}" class="link-btn" tabindex="0">Read More</a>
+                        {% else %}
+                        <a href="#nocontent" class="link-btn" tabindex="0">Read More</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+
+           
+
+
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- Services 3 -->
+ <section class="services-3 center section-padding bg-gray" style="padding: 60px 0!important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-subtitle">Collaborating for a Better Future</div>
+                <div class="section-title">Brand <span>Partners</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                {% for partner in partners %}
+                <div class="services3 mb-30">
+                    <div class="services3-img"><img src="{{partner.image.url}}" alt="" class="w-100"></div>
+                    <div class="services3-content">
+                        {% if partner.partner_logo %}
+                        <div class="clients-logo">
+                            <a href="#0"><img src="{{ partner.partner_logo.url }}" alt="" style="height: 70px;"></a>
+                        </div>
+                        {% endif %}
+                        {% comment %} <h3 class="services3-title">{{partner.name}}</h3> {% endcomment %}
+                        
+                    </div>
+                    <div class="title-box">
+                        <h3 class="mb-0">
+                             {{partner.name}}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Video & Testiominals -->
+<section class="testimonials">
+    <div class="background bg-img bg-fixed section-padding pb-0" data-background="{% static 'web/img/bannerfootersec.jpeg' %}" data-overlay-dark="4">
+        <div class="container">
+            <div class="row">
+                <!-- Video -->
+                <div class="col-md-6 mb-30 valign">
+                    <div class="vid-area">
+                        
+                        <div class="cont mt-30 mb-30">
+                           
+                            <h4> About Company</h4>
+                            <p>Safeline: Leading the Way in Innovation and Sustainability. With a focus on delivering top-quality electrical, HVAC and fire system, our company has earned the trust and admiration of clients. Our commitment to innovation and sustainability sets us apart, as we constantly explore new techniques and alternative energy sources.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testiominals -->
+                <div class="col-md-5 offset-md-1">
+                    <div class="testimonials-box">
+                        <div class="head-box">
+                            <h6>What said about us</h6>
+                            <h4>Customer Reviews</h4>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+                            
+                            
+                            {% for testimonial in testimonials %}
+
+                            <div class="item"> 
+                            <span class="quote">
+                                <img src="{% static 'web/img/quot.png' %}" alt="">
+                            </span>
+                                <p class="v-border">{{testimonial.review|safe}}</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="{{testimonial.image.url}}" alt=""> </div>
+                                    <div class="cont">
+                                        <h6>{{testimonial.name}}</h6> <span>{{testimonial.place}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients -->
+<!-- <section class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="owl-carousel owl-theme">
+                    {% for client in clients %}
+
+                    <div class="clients-logo">
+                        <a href="#0"><img src="{{client.image.url}}" alt=""></a>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</section> -->
+
+
+
+
+
+{% endblock %}

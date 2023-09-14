@@ -1,0 +1,320 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Slider -->
+<header class="header slider-fade">
+    <div class="owl-carousel owl-theme">
+        <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+        <div class="text-left item bg-img" data-overlay-dark="4"
+            data-background="{% static 'web/img/slider/banner1.png' %}">
+            <div class="v-middle caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4>Guaranteed High Quality</h4>
+                            <h1>Welcome to Safeline</h1>
+                            <p>Powering Your Future</p> <a href="#ourprojects" class="button-primary">Our
+                                Projects</a> <a href="#ourservices" class="button-tersiyer">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-left item bg-img" data-overlay-dark="4"
+            data-background="{% static 'web/img/slider/banner2.png' %}">
+            <div class="v-middle caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4>Guaranteed High Saftey</h4>
+                            <h1>Welcome to Safeline</h1>
+                            <p>Powering Your Future</p> <a href="#ourprojects" class="button-primary">Our
+                                Projects</a> <a href="#ourservices" class="button-tersiyer">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-left item bg-img" data-overlay-dark="4"
+            data-background="{% static 'web/img/slider/bannern3.jpg' %}">
+            <div class="v-middle caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4>Professional Team</h4>
+                            <h1>Welcome to Safeline</h1>
+                            <p>Powering Your Future</p> <a href="#ourprojects" class="button-primary">Our
+                                Projects</a> <a href="#ourservices" class="button-tersiyer">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- About -->
+<section class="about section-padding-lamiiz">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-30">
+                <div class="section-subtitle">Anwar Al Meiha Modern LLC</div>
+                <div class="section-title">About <span>Safeline</span></div>
+                <p>We have expanded our portfolio by establishing Safeline, a branch company of Anwar Al Meiha Group,
+                    founded in 1993, having objective to create new techniques in electrical field with best and
+                    improved methods, fulfilling all the modern demands of electrical works. An Oman based enterprise
+                    which is owned by Abbas KV and Khalid Muslem has won the trust of customers and the awe of
+                    competitors for ushering a modern way of serving customers in a traditional trade. Our approach is
+                    to provide you with the most innovative and cost effective service within the electrical industry.
+                    We pride ourselves on providing honest and reliable electrical solutions. As a market leader we can
+                    provide a diverse range of top quality products and services. </p>
+                <p>Our work was appreciated favorably in a short period of time and it grew into a huge success. The
+                    industrial sector responded admirably to our services and work. </p>
+
+
+            </div>
+            <div class="col-md-6">
+                <div class="about-img"> <img src="{% static 'web/img/about6.jpg' %}" alt="">
+                    <div class="about-img-hotifer">
+                        <p>Your complete electrical solution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services -->
+<section class="services2 center service-section-padding-lamiiz bg-gray" id="ourservices">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-subtitle">Delivering Exceptional Solutions</div>
+                <div class="section-title">Our <span>Services</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                {% for service in services %}
+                <div class="item mb-30">
+                    <div class="service-img">
+                        <div class="img"> <img src="{{service.image.url}}" alt=""> </div>
+                    </div>
+                    <div class="cont">
+
+                        <h5 style="font-size: 22px!important;"><a href="{% url 'web:services'  %}">{{service.name}}</a></h5>
+
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Numbers -->
+<section class="numbers">
+    <div class="section-padding bg-img bg-fixed section-padding"
+        data-background="{% static 'web/img/banner2middle.jpeg' %}" data-overlay-dark="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="item text-center"> <span class="icon">
+                            <i class="front norc-design"></i>
+                            <i class="back norc-design"></i>
+                        </span>
+                        <h3 class="count">25+</h3>
+                        <h6>Successful Years</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item text-center"> <span class="icon">
+                            <i class="font norc-b-meeting"></i>
+                            <i class="back norc-b-meeting"></i>
+                        </span>
+                        <h3 class="count">1200+</h3>
+                        <h6>Happy Clients</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item text-center"> <span class="icon">
+                            <i class="front norc-paper-diploma"></i>
+                            <i class="back norc-paper-diploma"></i>
+                        </span>
+                        <h3 class="count">100+</h3>
+                        <h6> Successful Projects</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects  -->
+
+<section class="services2 center section-padding bg-gray" style="padding: 60px 0!important;" id="ourprojects" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-subtitle">Making a Difference Together</div>
+                <div class="section-title">Our <span>Projects</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="swiper-container slideranimation" >
+                   
+                    <div class="swiper-wrapper">
+                    {% for project in projects %}
+                      <div class="swiper-slide position-relative"  >
+                        <img src="{{project.image.url}}" alt="" style=" width: 365px; height: 300px; object-fit: cover;" >
+                        <div class="position-absolute image-projcetname-div">
+                            
+                                <p class="image-projcetname">{{project.name}}</p>
+                            
+                        </div>
+                    
+                    </div>
+                    {% endfor %}
+                    </div>
+                    
+                </div>
+                
+            </div> 
+        </div>
+
+
+    </div>
+</section>
+
+<!-- Brand  3 -->
+<section class="services-3 center section-padding bg-gray" style="padding: 60px 0!important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-subtitle">Collaborating for a Better Future</div>
+                <div class="section-title">Brand <span>Partners</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                {% for partner in partners %}
+                <div class="services3 mb-30">
+                    <div class="services3-img"><img src="{{partner.image.url}}" alt="" class="w-100"></div>
+                    <div class="services3-content">
+                        {% if partner.partner_logo %}
+                        <div class="clients-logo">
+                            <a href="#0"><img src="{{ partner.partner_logo.url }}" alt="" style="height: 70px;"></a>
+                        </div>
+                        {% endif %}
+                        {% comment %} <h3 class="services3-title">{{partner.name}}</h3> {% endcomment %}
+
+                    </div>
+                    <div class="title-box">
+                        <h3 class="mb-0">
+                            {{partner.name}}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video & Testiominals -->
+<section class="testimonials">
+    <div class="background bg-img bg-fixed section-padding pb-0"
+        data-background="{% static 'web/img/bannerfootersec.jpeg' %}" data-overlay-dark="4">
+        <div class="container">
+            <div class="row">
+                <!-- Video -->
+                <div class="col-md-6 mb-30 valign">
+                    <div class="vid-area">
+
+                        <div class="cont mt-30 mb-30">
+
+                            <h4>About Company</h4>
+                            <p>Safeline : Leading the Way in Innovation and Sustainability. With a focus on delivering
+                                top-quality electrical, HVAC and fire system, our company has earned the trust and
+                                admiration of clients. Our commitment to innovation and sustainability sets us apart, as
+                                we constantly explore new techniques and alternative energy sources. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testiominals -->
+                <div class="col-md-5 offset-md-1">
+                    <div class="testimonials-box">
+                        <div class="head-box">
+                            <h6>What said about us</h6>
+                            <h4>Customer Reviews</h4>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+
+                            {% for testimonial in testimonials %}
+
+                            <div class="item">
+                                <span class="quote">
+                                    <img src="{% static 'web/img/quot.png' %}" alt="">
+                                </span>
+                                <p class="v-border">{{testimonial.review|safe}}</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="{{testimonial.image.url}}" alt=""> </div>
+                                    <div class="cont">
+                                        <h6>{{testimonial.name}}</h6> <span>{{testimonial.place}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients -->
+<!-- <section class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="owl-carousel owl-theme">
+
+                        {% for client in clients %}
+
+                        <div class="clients-logo">
+                            <a href="#0"><img src="{{client.image.url}}" alt=""></a>
+                        </div>
+
+                        {% endfor %}
+
+                        
+
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet"/>
+    
+
+
+
+{% endblock %}

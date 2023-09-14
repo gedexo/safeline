@@ -1,0 +1,59 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+
+
+<!-- Header Banner -->
+<section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Insights, Inspiration, and Information</h6>
+                <h1>Latest <span>Blog</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog -->
+<section class="news section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+            
+            
+            {% for blog in blogs %}
+
+            <div class="col-md-4 mb-60">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="{{blog.thumb_image.url}}" alt="">
+                            <div class="date">
+                                <a href="{% url 'web:blog-detail' blog.slug %}"> <span>{{blog.date}}</span> </a>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <h5><a href="{% url 'web:blog-detail' blog.slug %}">{{blog.title}}</a></h5>
+                            <div class="divider"></div>
+                            <div class="news-info">
+                                <div class="split-content news-info-left">
+                                    
+                                </div>
+                                <div class="split-content news-info-right"> <a href="{% url 'web:blog-detail' blog.slug %}" class="link-btn" tabindex="0">Read more</a> </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+            {% endfor %}
+
+
+
+            
+        
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

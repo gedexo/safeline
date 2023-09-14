@@ -1,0 +1,251 @@
+/*--------------------------------
+Nucleo Web Font - Generated using nucleoapp.com
+-------------------------------- */
+@font-face {
+  font-family: 'Nucleo';
+  src: url('../../fonts/Nucleo.eot');
+  src: url('../../fonts/Nucleo.eot') format('embedded-opentype'), url('../../fonts/Nucleo.woff2') format('woff2'), url('../../fonts/Nucleo.woff') format('woff'), url('../../fonts/Nucleo.ttf') format('truetype'), url('../../fonts/Nucleo.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------
+  base class definition
+-------------------------*/
+[class*="norc-"] {
+  display: inline-block;
+  font: normal normal normal 1em/1 'Nucleo';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  icons
+-------------------------*/
+
+.norc-small-right::before {
+  content: "\ea05";
+}
+.norc-small-left::before {
+  content: "\ea13";
+}
+.norc-small-down::before {
+  content: "\ea0a";
+}
+.norc-small-up::before {
+  content: "\ea11";
+}
+
+.norc-arrow-right::before {
+  content: "\ea06";
+}
+.norc-arrow-left::before {
+  content: "\ea14";
+}
+.norc-arrow-down-2::before {
+  content: "\ea0d";
+}
+
+.norc-triangle-right::before {
+  content: "\ea0e";
+}
+.norc-triangle-left::before {
+  content: "\ea10";
+}
+.norc-triangle-down::before {
+  content: "\ea0c";
+}
+.norc-triangle-up::before {
+  content: "\ea0f";
+}
+.norc-tail-top::before {
+  content: "\ea12";
+}
+
+.norc-i-remove::before {
+  content: "\ea30";
+}
+.norc-d-check::before {
+  content: "\ea31";
+}
+
+.norc-pin-3::before {
+  content: "\ea42";
+}
+.norc-phone::before {
+  content: "\ea40";
+}
+.norc-mail::before {
+  content: "\ea9c";
+}
+.norc-map::before {
+  content: "\ea80";
+}
+.norc-flag-points-32::before {
+  content: "\ea7e";
+}
+.norc-square-pin::before {
+  content: "\ea79";
+}
+
+.norc-single-content-03::before {
+  content: "\ea32";
+}
+.norc-receipt-list-43::before {
+  content: "\ea38";
+}
+
+.norc-paper::before {
+  content: "\ea37";
+}
+.norc-paper-diploma::before {
+  content: "\ea43";
+}
+.norc-trophy::before {
+  content: "\ea44";
+}
+.norc-single-03::before {
+  content: "\ea46";
+}
+.norc-b-meeting::before {
+  content: "\ea3d";
+}
+.norc-file-download-94::before {
+  content: "\ea3f";
+}
+.norc-progress::before {
+  content: "\ea4e";
+}
+.norc-bulb-63::before {
+  content: "\ea52";
+}
+.norc-strategy::before {
+  content: "\ea5d";
+}
+.norc-chess-knight::before {
+  content: "\ea5f";
+}
+.norc-pen-tool-2::before {
+  content: "\ea69";
+}
+.norc-ruler-pencil::before {
+  content: "\ea6a";
+}
+.norc-thumb-down::before {
+  content: "\ea6f";
+}
+.norc-thumb-up::before {
+  content: "\ea70";
+}
+.norc-sun::before {
+  content: "\ea72";
+}
+.norc-time-clock::before {
+  content: "\ea78";
+}
+.norc-play-movie::before {
+  content: "\ea82";
+}
+.norc-picture::before {
+  content: "\ea83";
+}
+.norc-sound::before {
+  content: "\ea86";
+}
+.norc-box-2::before {
+  content: "\ea8d";
+}
+.norc-support::before {
+  content: "\ea8e";
+}
+.norc-h-dashboard::before {
+  content: "\ea94";
+}
+.norc-clock::before {
+  content: "\ea96";
+}
+.norc-calendar-2::before {
+  content: "\ea9a";
+}
+.norc-favorite::before {
+  content: "\ea9d";
+}
+.norc-unlocked::before {
+  content: "\eaa0";
+}
+.norc-lock::before {
+  content: "\eaa2";
+}
+.norc-social-sharing::before {
+  content: "\eaa8";
+}
+.norc-star-rate-1::before {
+  content: "\eaad";
+}
+.norc-star-rate-2::before {
+  content: "\eaae";
+}
+
+/* construction icons */
+.norc-factory::before {
+  content: "\ea4b";
+}
+.norc-layout-25::before {
+  content: "\ea36";
+}
+.norc-forest::before {
+  content: "\ea73";
+}
+.norc-chart-bar-32::before {
+  content: "\ea49";
+}
+.norc-chart-bar-33::before {
+  content: "\ea53";
+}
+.norc-chart-pie-36::before {
+  content: "\ea4a";
+}
+.norc-chart-growth::before {
+  content: "\ea54";
+}
+
+.norc-radiation::before {
+  content: "\ea76";
+}
+.norc-design::before {
+  content: "\ea61";
+}
+.norc-stack::before {
+  content: "\ea63";
+}
+
+.norc-measure-big::before {
+  content: "\ea65";
+}
+.norc-pantone::before {
+  content: "\ea68";
+}
+.norc-property-location::before {
+  content: "\ea81";
+}
+.norc-new-construction::before {
+  content: "\ea89";
+}
+.norc-construction-sign::before {
+  content: "\ea8a";
+}
+.norc-barcode-qr::before {
+  content: "\ea8c";
+}
+.norc-tag::before {
+  content: "\ea90";
+}
+.norc-cogwheel::before {
+  content: "\eaa6";
+}
+.norc-zoom::before {
+  content: "\ea04";
+}

@@ -1,0 +1,13 @@
+asgiref==3.7.2
+Babel==2.12.1
+Django==4.2.5
+django-phonenumber-field==7.1.0
+django-tinymce==3.6.1
+django-versatileimagefield==3.0
+phonenumbers==8.13.20
+Pillow==10.0.0
+psycopg2-binary==2.9.7
+python-decouple==3.8
+python-magic==0.4.27
+sqlparse==0.4.4
+typing_extensions==4.7.1

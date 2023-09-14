@@ -1,0 +1,81 @@
+{% load static %}
+
+
+<!-- Top Navbar -->
+<div class="main-header">
+    <div class="header-top">
+        <div class="container">
+            <div class="top-outer clearfix">
+                <!--Top Left-->
+                <div class="top-left">
+                    <ul class="links clearfix">
+                        <!-- <li><a href="tel:+96826988333"><span class="fa fa-phone"></span>+968 26988333</a></li>
+                        <li><a href=""><span class="fa fa-envelope"></span>enquiry@safe-line.co</a></li>
+                        <li><a href="https://goo.gl/maps/zgdqkg4hFFR8pfDS8" target="_blank"><span class="fa fa-map-marker"></span>Barka Industrial Area, Sultanate of Oman, PC:320, PB:736</a></li> -->
+                            <li>Anwar Al Meiha Group</li>
+                            <li>مجموعة انوار الميحة</li>
+                    
+                    </ul>
+                </div>
+                <!--Top Right-->
+                <div class="top-right clearfix">
+                    <ul class="social-icon-one">
+                        
+                        <li>
+                            <a href="https://www.facebook.com/safelineelectrical" target="_blank" class="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/safelineoman?igshid=MzRlODBiNWFlZA==" target="_blank" class="fa fa-instagram"></a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://wa.me/96891924377" target="_blank" class="fa fa-whatsapp"></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <a class="logo" href="{% url 'web:index' %}"> <img src="{% static 'web/img/safelinelogo.svg' %}" class="logo-img" alt=""> </a>
+            
+        </div>
+        <!-- Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span> </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown"> <a  class="nav-link {% if is_index %} active {% endif %} dropdown-toggle"  href="{% url 'web:index' %}" >Home </a>
+                    
+                </li>
+                <li class="nav-item"><a class="nav-link {% if is_about %} active {% endif %} " href="{% url 'web:about' %}">About</a></li>
+                <li > <a class="nav-link dropdown-toggle {% if is_services %} active {% endif %}" href="{% url 'web:services' %}" >Services </a>
+                    
+                </li>
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle {% if is_projects %} active {% endif %}" href="{% url 'web:projects' %}" >Projects </a>
+                    
+                </li>
+              
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle {% if is_product %} active {% endif %}" href="{% url 'web:products-category' %}" >Products </a>
+
+                <li class="nav-item"><a class="nav-link {% if is_certificate %} active {% endif %}" href="{% url 'web:certificates' %}">Certificates</a></li>  
+                 
+                <li class="nav-item"><a class="nav-link {% if is_career %} active {% endif %}" href="{% url 'web:careers' %}">Career</a></li>    
+
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle {% if is_gallery %} active {% endif %}" href="{% url 'web:gallery' %}" >Gallery </a>
+                    
+                </li>
+                
+                <li class="nav-item"><a class="nav-link {% if is_contact %} active {% endif %}" href="{% url 'web:contact' %}">Contact</a></li>
+
+                
+            </ul>
+        </div>
+    </div>
+</nav>

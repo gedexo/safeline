@@ -1,0 +1,50 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+<!-- Header Banner -->
+<section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Explore Our Diverse Range</h6>
+                <h1>Category</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Blog -->
+<section class="news section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+            {% for category in categories %}
+            <div class="col-md-4 mb-60">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="{{category.image.url}}" alt="">
+                            
+                        </div>
+                        <div class="con">
+                            <h5><a href="{% url 'web:products-list' category.slug %}">{{category.name}}</a></h5>
+                            <div class="divider"></div>
+                            <div class="news-info">
+                                
+                                <div class="split-content news-info-right"> <a href="{% url 'web:products-list' category.slug %}" class="link-btn" tabindex="0">Read more</a> </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

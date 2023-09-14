@@ -1,0 +1,133 @@
+{% extends 'partials/base.html' %} 
+{% load static %} 
+{% block content %}
+
+
+
+ <!-- Header Banner -->
+ <section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Making a Difference Together</h6>
+                <h1>Our <span>Projects</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Services -->
+{% comment %} <section class="services2 center section-padding " style="padding: 70px 0!important;" >
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                
+                {% for project in projects %}
+                <div class="square-flip">
+                    <a href="{% url 'web:gallery' %}"><div class="square bg-img" data-background="{{project.image.url}}">
+                        <div class="square-container d-flex align-items-end justify-content-end">
+                            <div class="box-title">
+                                
+                                <h4>{{project.name}}</h4>
+                            </div>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div></a>
+                    
+                    <div class="square2">
+                        <div class="square-container2">
+                            <h4>{{project.name}}</h4>
+                            
+                            <a href="" class="link-btn" tabindex="0"></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> 
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<section class="section-padding">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <!-- 3 columns -->
+            {% for gallery in gallery  %}
+            <div class="col-md-4  col-sm-12 gallery-item">
+                <a href="{{gallery.image.url}}" title="{{gallery.note}}" class="img-zoom img-zoom-lamiiz">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="{{gallery.thumb_image.url}}" class="img-fluid mx-auto d-block" alt="work-img"> </div>
+                    </div>
+                <div class="image-name-div">
+                    <p class="image-name">{{gallery.note}}</p>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+ <!-- Services 3 -->
+ {% comment %} <section class="services-3 center section-padding bg-gray" style="padding: 60px 0!important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-subtitle">Collaborating for a Better Future</div>
+                <div class="section-title">Brand <span>Partners</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 owl-carousel owl-theme">
+                {% for partner in partners %}
+                <div class="services3 mb-30">
+                    <div class="services3-img"><img src="{{partner.image.url}}" alt="" class="w-100"></div>
+                    <div class="services3-content">
+                        {% if partner.partner_logo %}
+                        <div class="clients-logo">
+                            <a href="#0"><img src="{{ partner.partner_logo.url }}" alt=""></a>
+                        </div>
+                        {% endif %}
+                        <h3 class="services3-title">{{partner.name}}</h3>
+                        
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+
+
+
+{% comment %}
+
+<section class="services2 center section-padding "  >
+    <div class="container">
+        
+        <div class="row">
+            <div class="carousel__container">
+                {% for project in projects %}
+              <div class="carousel__item">
+                <img src="{{project.image.url}}" class="carousel__image">
+              </div>
+              {% endfor %}
+            </div>  
+        </div>
+    </div>
+</section>
+
+{% endcomment %}
+
+
+
+
+
+{% endblock %}

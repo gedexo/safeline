@@ -1,0 +1,56 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Header Banner -->
+<section class="banner-header banner-img-top section-padding valign bg-img bg-fixed" data-overlay-dark="4"
+    data-background="{% static 'web/img/slider/allbanner.jpg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h6>Certifications: Recognizing Achievements</h6>
+                <h1>Our <span>Certificates</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!--  Image Gallery -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+
+            <!-- 3 columns -->
+            {% for certificate in certificate %}
+            <div class="col-md-4 gallery-item">
+                <a href="{{certificate.image.url}}" title="{{certificate.note}}" class="img-zoom">
+
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="{{certificate.image.url}}" class="img-fluid mx-auto d-block"
+                                alt="certificate-img"> </div>
+                    </div>
+                </a>
+                <div class="image-name-div">
+                    <p class="image-name">{{certificate.name}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}
