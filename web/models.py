@@ -22,6 +22,8 @@ class Service(models.Model):
     sub_content = HTMLField(null=True, blank=True)
 
     order = models.CharField(max_length=10, null=True, blank=True)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
 
     def __str__(self):
         return str(self.name)
